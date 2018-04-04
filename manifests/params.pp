@@ -22,6 +22,9 @@ class kerberos::params {
           'krb5-workstation'
         ]
     }
+    'Archlinux': {
+      $package = ['krb5', 'pam-krb5']
+    }
     default:{
       fail("The kerberos Puppet module does not support ${::osfamily} family of operating systems")
     }
